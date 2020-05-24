@@ -2,6 +2,7 @@ import java.util.*;
 
 public class main {
     public static void main(String[] args) {
-        System.out.println("hi world");
+        Map testMap = new Map("testmap.txt");
+        testMap.printMap();
     }
 }

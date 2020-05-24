@@ -4,4 +4,5 @@ public class Player {
     private int facing;
     private Character main;
     private Character[] support;
+
 }
