@@ -1,12 +1,12 @@
 import java.io.File;
 import java.util.Scanner;
 
-public class Map {
+public class GameMap {
     private Chunk[][] mapData;
     private int maxX; // VERTICAL POSITION
     private int maxY; // HORIZ POSITION
 
-    public Map(String fname) {
+    public GameMap(String fname) {
         try {
             File f = new File("maps/" + fname);
             Scanner s = new Scanner(f);
