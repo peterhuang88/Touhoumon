@@ -65,6 +65,8 @@ public class MapPanel extends JPanel implements KeyListener {
             h.resolveMove(3);
         }
         repaint();
+        h.resolveStep();
+        repaint();
     }
     public void keyReleased(KeyEvent e) {
 

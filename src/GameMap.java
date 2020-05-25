@@ -16,13 +16,12 @@ public class GameMap {
             for (int i = 0; i < x; i++) {
                 for (int j = 0; j < y; j++) {
                     int dat = s.nextInt();
-                    switch(dat) {
-                        case 0:
-                            mapData[i][j] = new Grass();
-                            break;
-                        case 1:
-                            mapData[i][j] = new Wall();
-                            break;
+                    if (dat == 0) {
+                        mapData[i][j] = new Grass();
+                    } else if (dat == 1) {
+                        mapData[i][j] = new Wall();
+                    } else if (dat >= 100) {
+                        mapData[i][j] = new Warp(dat);
                     }
                 }
             }

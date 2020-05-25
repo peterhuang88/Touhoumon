@@ -1,0 +1,3 @@
+2
+0;testmap.txt;12;23
+1;testmap2.txt;4;1

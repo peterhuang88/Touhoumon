@@ -1,7 +1,10 @@
-import java.awt.Color;
+import java.awt.*;
 
-public class Grass implements Chunk {
-
+public class Warp implements Chunk{
+    private int dest;
+    public Warp(int dest) {
+        this.dest = dest;
+    }
     public boolean checkCollision() {
         return false;
     }
@@ -9,12 +12,12 @@ public class Grass implements Chunk {
         return false;
     }
     public int checkStep() {
-        return 0;
+        return dest;
     }
     public int getNum() {
-        return 0;
+        return dest;
     }
     public Color getColor() {
-        return Color.GREEN;
+        return Color.RED;
     }
 }
