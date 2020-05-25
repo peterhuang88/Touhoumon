@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 public class Wall implements Chunk {
 
     public boolean checkCollision() {
@@ -11,5 +13,8 @@ public class Wall implements Chunk {
     }
     public int getNum() {
         return 1;
+    }
+    public Color getColor() {
+        return Color.BLUE;
     }
 }

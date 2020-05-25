@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 public class Grass implements Chunk {
 
     public boolean checkCollision() {
@@ -11,5 +13,8 @@ public class Grass implements Chunk {
     }
     public int getNum() {
         return 0;
+    }
+    public Color getColor() {
+        return Color.GREEN;
     }
 }

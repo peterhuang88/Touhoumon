@@ -36,9 +36,16 @@ public class GameMap {
         for (int i = 0; i < maxX; i++) {
             for (int j = 0; j < maxY; j++) {
                 Chunk c = mapData[i][j];
-                System.out.print(c.getNum() + " ");
+                System.out.print(c.getNum() + "  ");
             }
             System.out.println();
+        }
+    }
+    public Chunk getChunk(int x, int y) {
+        try {
+            return mapData[x][y];
+        } catch(ArrayIndexOutOfBoundsException e) {
+            return null;
         }
     }
 }
