@@ -2,11 +2,13 @@ public class MapHandler {
     GameMap map;
     Player player;
     Chunk[][] displayArea;
+    WarpTable wt;
 
     public MapHandler(GameMap m, Player p) {
         map = m;
         player = p;
         displayArea = new Chunk[9][11];
+        wt = new WarpTable("testwarps.txt");
         updateDisplayArea();
     }
     public boolean resolveMove(int dir) {
@@ -35,14 +37,20 @@ public class MapHandler {
             } else {
                 player.step();
                 updateDisplayArea();
-                resolveStep(front);
                 return true;
             }
         }
     }
-    public boolean resolveStep(Chunk c) {
-        if (c.checkStep()) {
-            System.out.println("Resolve Step Action");
+    public boolean resolveStep() {
+        Chunk c = map.getChunk(player.getXPos(), player.getYPos());
+        int stepval = c.checkStep();
+        if (stepval >= 100) {
+            String dest = wt.getName(stepval%100);
+            int destx = wt.getDestX(stepval%100);
+            int desty = wt.getDestY(stepval%100);
+            map = new GameMap(dest);
+            player.setPos(destx, desty);
+            updateDisplayArea();
             return true;
         }
         return false;

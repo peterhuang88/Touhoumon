@@ -44,4 +44,8 @@ public class Player {
     public int getDir() {
         return facing;
     }
+    public void setPos(int xPos, int yPos) {
+        this.xPos = xPos;
+        this.yPos = yPos;
+    }
 }

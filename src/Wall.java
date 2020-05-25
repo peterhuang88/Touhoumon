@@ -8,8 +8,8 @@ public class Wall implements Chunk {
     public boolean checkInteract() {
         return false;
     }
-    public boolean checkStep() {
-        return false;
+    public int checkStep() {
+        return 0;
     }
     public int getNum() {
         return 1;
