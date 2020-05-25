@@ -30,6 +30,10 @@ public class MapHandler {
                     break;
 
             }
+
+            // TODO: DEBUG
+            System.out.println("Current player pos: (" + player.getXPos() + ", " + player.getYPos() + ")");
+
             if (front == null || front.checkCollision()) {
                 return false;
             } else {
