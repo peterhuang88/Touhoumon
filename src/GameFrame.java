@@ -1,8 +1,8 @@
 import javax.swing.*;
 
 public class GameFrame extends JFrame {
-    MapPanel p;
-    public GameFrame(MapPanel p) {
+    JPanel p;
+    public GameFrame(JPanel p) {
         this.p = p;
         init();
     }
@@ -13,6 +13,6 @@ public class GameFrame extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        addKeyListener(p);
+        //addKeyListener(p);
     }
 }

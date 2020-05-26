@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MapPanel extends JPanel implements KeyListener {
+public class MapPanel extends JPanel {
     public MapHandler h;
 
     public MapPanel(MapHandler handler) {
@@ -53,25 +53,5 @@ public class MapPanel extends JPanel implements KeyListener {
         }
 
     }
-    public void keyPressed(KeyEvent e) {
-        int code = e.getKeyCode();
-        if (code == KeyEvent.VK_UP) {
-            h.resolveMove(0);
-        } else if (code == KeyEvent.VK_RIGHT) {
-            h.resolveMove(1);
-        } else if (code == KeyEvent.VK_DOWN) {
-            h.resolveMove(2);
-        } else if (code == KeyEvent.VK_LEFT) {
-            h.resolveMove(3);
-        }
-        repaint();
-        h.resolveStep();
-        repaint();
-    }
-    public void keyReleased(KeyEvent e) {
 
-    }
-    public void keyTyped(KeyEvent e) {
-
-    }
 }

@@ -1,3 +1,7 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class MapHandler {
     GameMap map;
     Player player;
@@ -14,7 +18,7 @@ public class MapHandler {
     public boolean resolveMove(int dir) {
         if (dir != player.getDir()) {
             player.turn(dir);
-            return true;
+            return false;
         } else {
             Chunk front = null;
             switch(dir) {
@@ -58,6 +62,25 @@ public class MapHandler {
             return true;
         }
         return false;
+    }
+    public boolean resolveInteract() {
+        Chunk front = null;
+        switch(player.getDir()) {
+            case 0:
+                front = map.getChunk(player.getXPos() - 1, player.getYPos());
+                break;
+            case 1:
+                front = map.getChunk(player.getXPos(), player.getYPos() + 1);
+                break;
+            case 2:
+                front = map.getChunk(player.getXPos() + 1, player.getYPos());
+                break;
+            case 3:
+                front = map.getChunk(player.getXPos(), player.getYPos() - 1);
+                break;
+
+        }
+        return front.checkInteract();
     }
     public void updateDisplayArea() {
         for (int m = 0; m < 9; m++) {

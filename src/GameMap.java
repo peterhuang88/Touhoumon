@@ -5,6 +5,7 @@ public class GameMap {
     private Chunk[][] mapData;
     private int maxX; // VERTICAL POSITION
     private int maxY; // HORIZ POSITION
+    private NPC[] npcs;
 
     public GameMap(String fname) {
         try {
@@ -27,6 +28,14 @@ public class GameMap {
             }
             maxX = x;
             maxY = y;
+            f = new File("NPCs/" + fname);
+            s = new Scanner(f);
+            int n = Integer.parseInt(s.nextLine());
+            npcs = new NPC[n];
+            for (int i = 0; i < n; i++) {
+                npcs[i] = new NPC(s.nextLine());
+                mapData[npcs[i].xPos][npcs[i].yPos] = npcs[i];
+            }
         } catch(Exception e) {
             System.out.println("Error when reading map file.");
         }
