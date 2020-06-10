@@ -19,7 +19,7 @@ public class Game implements KeyListener {
     {
         // create new GameMap and player
         this.gameMap = new GameMap(mapfile);
-        this.reimu = new Player("Reimu", 3, 12, 0);
+        this.reimu = new Player("Reimu", 19, 12, 0);
         inputtable = false;
         // create instances of GUI
         this.h = new MapHandler(gameMap, reimu);

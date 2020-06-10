@@ -12,7 +12,7 @@ public class MapHandler {
         map = m;
         player = p;
         displayArea = new Chunk[9][11];
-        wt = new WarpTable("testwarps.txt");
+        wt = new WarpTable("gamewarps.txt");
         updateDisplayArea();
     }
     public boolean resolveMove(int dir) {

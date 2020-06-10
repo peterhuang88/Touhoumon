@@ -1,0 +1,15 @@
+14
+0;shrine_inner.txt;11;6
+1;r1.txt;1;109
+2;shrine.txt;13;12
+3;shrine.txt;23;12
+4;village.txt;12;23
+5;r1.txt;52;1
+6;r2.txt;58;7
+7;r3.txt;0;0
+8;kourindou.txt;9;5
+9;village_inn.txt;11;6
+10;village.txt;1;12
+11;mansion_grounds.txt;0;0
+12;village.txt;7;19
+13;village.txt;7;5
